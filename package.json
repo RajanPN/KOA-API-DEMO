@@ -1,0 +1,24 @@
+{
+  "name": "koa_api_template",
+  "version": "1.0.0",
+  "description": "KOA_V1 API TEMPELTE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "RAJAN MAHARJAN",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-handle-error": "^0.0.5",
+    "koa-json-error": "^3.1.2",
+    "koa-logger": "^3.1.0",
+    "koa-res": "^2.0.0",
+    "koa-router": "^7.2.1",
+    "mongoose": "^4.13.0"
+  }
+}
