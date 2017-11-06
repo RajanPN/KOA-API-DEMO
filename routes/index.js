@@ -7,6 +7,9 @@ const tasksController = require("../controllers/task.controllers");
 const BASE_URL = `/api/v1`;
 
 router.get('/', testController.welcome);
+router.get('/s', testController.testSeneca);
+router.get('/m', testController.testMolecular);
+router.get('/sb', testController.testServicebus);
 router.get(`${BASE_URL}/hello`, testController.testHello);
 
 router.get(`${BASE_URL}/tasks`, tasksController.getTasks);
