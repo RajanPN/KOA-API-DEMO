@@ -46,6 +46,9 @@ app.use(taskRoutes.routes())
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT).on("error", err => {
+app.listen(PORT, () => {
+  console.log('KOA API is running at http://localhost:%s', PORT); 
+  console.log('  Press CTRL-C to stop\n');
+}).on("error", err => {
   console.error(err);
 });

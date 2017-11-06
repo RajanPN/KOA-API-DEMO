@@ -19,6 +19,9 @@
     "koa-logger": "^3.1.0",
     "koa-res": "^2.0.0",
     "koa-router": "^7.2.1",
-    "mongoose": "^4.13.0"
+    "molecular": "0.0.0",
+    "mongoose": "^4.13.0",
+    "seneca": "^3.4.3",
+    "servicebus": "^2.0.10"
   }
 }

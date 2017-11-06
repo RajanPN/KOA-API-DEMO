@@ -8,7 +8,7 @@ mongoose.Promise = require('bluebird')
 mongoose.connect( dbURL, {
     useMongoClient: true
   }).then((response) => {
-  console.log('mongo connection created')
+  console.log('Mongo connection created.')
 })
 .catch((err) => {
   console.log("Error connecting to Mongo")
