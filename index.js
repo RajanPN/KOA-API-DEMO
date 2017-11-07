@@ -9,11 +9,13 @@ const logger = require('koa-logger')
 const koaRes = require('koa-res')
 const handleError = require('koa-handle-error')
 const taskRoutes = require('./routes/')
-
-/*
-  Mongoose db Connection
-*/
-const db = require('./db')
+const senecaGetTasks = require('./workers/seneca/senecaGetTaskService')
+const senecaCreateTask = require('./workers/seneca/senecaAddNewTaskService')
+  /*
+    Mongoose db Connection
+  */
+  // const db = require('./db')
+const db = require('./db_auth')
 
 
 const app = new koa()
@@ -22,7 +24,7 @@ const app = new koa()
   Server Config
 */
 // error handling
-app.use(async (ctx, next) => {
+app.use(async(ctx, next) => {
   try {
     await next()
   } catch (err) {

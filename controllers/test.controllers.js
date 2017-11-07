@@ -1,23 +1,17 @@
 const TaskModel = require('../models/task.model')
-// const { ServiceBroker } = require("moleculer");
-// let broker = new ServiceBroker({ logger: console });
 
 exports.welcome = async(ctx) => {
-    ctx.body = 'Welcome :)'
+	ctx.body = 'Welcome :)'
 }
 
 exports.testHello = async(ctx) => {
-    ctx.body = 'Hello from test route!!!'
-}
-
-exports.testSeneca = async(ctx) => {
-    ctx.body = 'Hello from test Seneca!!!'
+	ctx.body = 'Hello from test route!!!'
 }
 
 exports.testMolecular = async(ctx) => {
-    ctx.body = 'Hello from test Molecular!!!'
+	ctx.body = 'Hello from test Molecular!!!'
 }
 
 exports.testServicebus = async(ctx) => {
-    ctx.body = 'Hello from test Servicebus!!!'
+	ctx.body = 'Hello from test Servicebus!!!'
 }
