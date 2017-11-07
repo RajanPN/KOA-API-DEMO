@@ -1,6 +1,5 @@
 const TaskModel = require('../models/task.model')
-// const { ServiceBroker } = require("moleculer");
-// let broker = new ServiceBroker({ logger: console });
+var Seneca = require('seneca')
 
 exports.welcome = async(ctx) => {
     ctx.body = 'Welcome :)'
@@ -11,7 +10,16 @@ exports.testHello = async(ctx) => {
 }
 
 exports.testSeneca = async(ctx) => {
+
+    function local() {
+        this.add('cmd:run', function(msg, done) {
+            this.prior(msg, (err, reply) => {
+                return done(null, { tag: reply ? reply.tag : 'local' })
+            })
+        })
+    }
     ctx.body = 'Hello from test Seneca!!!'
+
 }
 
 exports.testMolecular = async(ctx) => {
