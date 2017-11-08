@@ -14,8 +14,8 @@ const senecaCreateTask = require('./workers/seneca/senecaAddNewTaskService')
   /*
     Mongoose db Connection
   */
-  // const db = require('./db')
-const db = require('./db_auth')
+  const db = require('./db')
+// const db = require('./db_auth')
 
 
 const app = new koa()
