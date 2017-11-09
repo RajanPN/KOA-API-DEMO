@@ -6,7 +6,7 @@ const getTasks = async(msg, reply) => {
 
   const tasks = await TaskModel.find({})
 
-  console.log('tasks', tasks);
+  console.log('tasks from seneca', tasks)
 
   reply({
     tasks: tasks

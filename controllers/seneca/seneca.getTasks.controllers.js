@@ -28,7 +28,7 @@ const getTaskSeneca = async() => {
 					throw new Error("There was an error retrieving your converted data.")
 				} else {
 					if (response.tasks.length) {
-						console.log('List of tasks', response);
+						console.log('List of tasks from seneca', response);
 						return response
 					} else {
 						console.log('No tasks found');

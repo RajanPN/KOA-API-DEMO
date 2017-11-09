@@ -12,7 +12,7 @@ const getTasks = async(event) => {
 bus.listen('task.getTask', function (event) {
   getTasks(event).then((res)=>{
       if(res.tasks.length)
-        return console.log('Task list',res);
+        return console.log('Task list from service bus',res);
       else
         return bus.send('task.createTask', {
           name: 'Go to doctor',

@@ -8,10 +8,7 @@ const createNewTasks = async(msg, reply) => {
     name: msg.name,
     urgency: msg.urgency
   })
-
-
-  console.log('New task', result)
-
+  
   reply({
     result: {
       message: 'Task created!',

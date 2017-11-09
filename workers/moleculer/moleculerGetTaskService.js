@@ -4,6 +4,7 @@ const getTasks = async(ctx) => {
 
   const tasks = await TaskModel.find({})
 
+  console.log('task list from molecular', tasks);
   return({
     tasks: tasks
   })

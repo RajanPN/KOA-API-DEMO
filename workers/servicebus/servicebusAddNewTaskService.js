@@ -20,7 +20,7 @@ const createNewTasks = async(ctx) => {
 
 bus.listen('task.createTask', function (event) {
   createNewTasks(event).then((res)=>{
-    console.log('New task', res)
+    console.log('New task from servicebus', res)
     }
   );
 });

@@ -26,7 +26,7 @@ exports.create = async(ctx) => {
 					// throw new Error("There was an error creating task.")
 				} else {
 					if (response.tasks.length) {
-						console.log('List of tasks', response);
+						console.log('List of tasks from seneca', response);
 					}
 					console.log('Counln\'t create task');
 				}
