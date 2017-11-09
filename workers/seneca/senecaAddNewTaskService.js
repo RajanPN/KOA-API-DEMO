@@ -1,6 +1,6 @@
-const Seneca = require('seneca')
-const TaskModel = require('../../models/task.model')
-const Logger = require('./custom-logger')
+const Seneca = require('seneca');
+const TaskModel = require('../../models/task.model');
+const Logger = require('./custom-logger');
 
 const createNewTasks = async(msg, reply) => {
 

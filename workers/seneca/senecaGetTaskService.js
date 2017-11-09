@@ -1,12 +1,12 @@
-const Seneca = require('seneca')
-const TaskModel = require('../../models/task.model')
-const Logger = require('./custom-logger')
+const Seneca = require('seneca');
+const TaskModel = require('../../models/task.model');
+const Logger = require('./custom-logger');
 
 const getTasks = async(msg, reply) => {
 
   const tasks = await TaskModel.find({})
 
-  console.log('tasks', tasks)
+  console.log('tasks', tasks);
 
   reply({
     tasks: tasks
