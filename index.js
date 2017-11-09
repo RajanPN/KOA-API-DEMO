@@ -11,6 +11,10 @@ const handleError = require('koa-handle-error')
 const taskRoutes = require('./routes/')
 const senecaGetTasks = require('./workers/seneca/senecaGetTaskService')
 const senecaCreateTask = require('./workers/seneca/senecaAddNewTaskService')
+const serviceBusGetTask = require('./workers/servicebus/serviceBusGetTaskService')
+const serviceBusCreateTask = require('./workers/servicebus/servicebusAddNewTaskService')
+
+
   /*
     Mongoose db Connection
   */
