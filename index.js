@@ -13,6 +13,8 @@ const senecaGetTasks = require('./workers/seneca/senecaGetTaskService')
 const senecaCreateTask = require('./workers/seneca/senecaAddNewTaskService')
 const serviceBusGetTask = require('./workers/servicebus/serviceBusGetTaskService')
 const serviceBusCreateTask = require('./workers/servicebus/servicebusAddNewTaskService')
+const serviceBusSubscriber1 = require('./workers/servicebus/subscriber1')
+const serviceBusSubscriber2 = require('./workers/servicebus/subscriber2')
 
 
   /*
