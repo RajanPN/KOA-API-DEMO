@@ -19,7 +19,7 @@ bus.listen('task.getTask', function (event) {
         return null;
       }
       else {
-        bus.publish('task.workerEvente', {
+        bus.publish('task.workerEvent', {
           msg: 'Creating new task!,',
         })
         return bus.send('task.createTask', {

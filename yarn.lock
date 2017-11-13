@@ -100,6 +100,10 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+bindings@^1.2.1:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.3.0.tgz#b346f6ecf6a95f5a815c5839fc7cdb22502f1ed7"
+
 bitsyntax@~0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/bitsyntax/-/bitsyntax-0.0.4.tgz#eb10cc6f82b8c490e3e85698f07e83d46e0cba82"
@@ -274,7 +278,7 @@ debug@*:
   dependencies:
     ms "2.0.0"
 
-debug@^2.2.0, debug@^2.6.9:
+debug@^2.1.3, debug@^2.2.0, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -311,6 +315,10 @@ depd@1.1.1, depd@^1.1.0, depd@~1.1.1:
 destroy@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
+
+double-ended-queue@^2.1.0-0:
+  version "2.1.0-0"
+  resolved "https://registry.yarnpkg.com/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz#103d3527fd31528f40188130c841efdd78264e5c"
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -351,6 +359,10 @@ extend-shallow@^2.0.1:
   resolved "https://registry.yarnpkg.com/extend-shallow/-/extend-shallow-2.0.1.tgz#51af7d614ad9a9f610ea1bafbb989d6b1c56890f"
   dependencies:
     is-extendable "^0.1.0"
+
+extend@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/extend/-/extend-2.0.1.tgz#1ee8010689e7395ff9448241c98652bc759a8260"
 
 extend@^3.0.0:
   version "3.0.1"
@@ -439,6 +451,13 @@ has-values@^1.0.0:
   dependencies:
     is-number "^3.0.0"
     kind-of "^4.0.0"
+
+hiredis@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/hiredis/-/hiredis-0.5.0.tgz#db03a98becd7003d13c260043aceecfacdf59b87"
+  dependencies:
+    bindings "^1.2.1"
+    nan "^2.3.4"
 
 hoek@4.x.x:
   version "4.2.0"
@@ -857,6 +876,10 @@ muri@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/muri/-/muri-1.3.0.tgz#aeccf3db64c56aa7c5b34e00f95b7878527a4721"
 
+nan@^2.3.4:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.7.0.tgz#d95bf721ec877e08db276ed3fc6eb78f9083ad46"
+
 nanomatch@1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.5.tgz#5c9ab02475c76676275731b0bf0a7395c624a9c4"
@@ -1055,6 +1078,22 @@ reconnect-core@1.3.0:
   dependencies:
     backoff "~2.5.0"
 
+redis-commands@^1.2.0:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/redis-commands/-/redis-commands-1.3.1.tgz#81d826f45fa9c8b2011f4cd7a0fe597d241d442b"
+
+redis-parser@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/redis-parser/-/redis-parser-2.6.0.tgz#52ed09dacac108f1a631c07e9b69941e7a19504b"
+
+redis@^2.3.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/redis/-/redis-2.8.0.tgz#202288e3f58c49f6079d97af7a10e1303ae14b02"
+  dependencies:
+    double-ended-queue "^2.1.0-0"
+    redis-commands "^1.2.0"
+    redis-parser "^2.6.0"
+
 regex-not@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/regex-not/-/regex-not-1.0.0.tgz#42f83e39771622df826b02af176525d6a5f157f9"
@@ -1137,6 +1176,26 @@ seneca@^3.4.3:
     seneca-transport "2.1.1"
     use-plugin "0.3.2"
     wreck "12.2.0"
+
+servicebus-retry@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/servicebus-retry/-/servicebus-retry-0.0.11.tgz#7b6c02df1b1d02074b30bcb84cc8e2e052dec4e9"
+  dependencies:
+    debug "^2.1.3"
+    extend "^2.0.0"
+    hiredis "^0.5.0"
+    redis "^2.3.0"
+    servicebus "^1.0.9"
+
+servicebus@^1.0.9:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/servicebus/-/servicebus-1.0.21.tgz#628c29aa7f6d0b8d757c79c2fd2766248c0115dd"
+  dependencies:
+    amqplib "^0.4.0"
+    debug "^2.2.0"
+    extend "^3.0.0"
+    node-uuid "^1.4.3"
+    readable-id "0.0.3"
 
 servicebus@^2.0.10:
   version "2.0.10"
