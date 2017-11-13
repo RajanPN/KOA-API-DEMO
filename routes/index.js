@@ -3,15 +3,11 @@ const router = new Router();
 
 const testController = require("../controllers/test.controllers");
 const tasksController = require("../controllers/task.controllers");
-const senecaController = require("../controllers/seneca/seneca.getTasks.controllers");
-const molecularController = require("../controllers/moleculer/moleculer.controller");
 const servicebusController = require("../controllers/servicebus/servicebus.getTask.controller");
 
 const BASE_URL = `/api/v1`;
 
 router.get('/', testController.welcome);
-router.get('/s', senecaController.testSeneca);
-router.get('/m', molecularController.testMoleculer);
 router.get('/sb', servicebusController.testServiceBus);
 router.get(`${BASE_URL}/hello`, testController.testHello);
 
