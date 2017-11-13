@@ -12,14 +12,14 @@ const getTasks = async (event) => {
 bus.listen('task.getTask', function (event) {
   getTasks(event).then((res) => {
       if (res.tasks.length) {
-        bus.publish('task.workerEvent', {
+        bus.publish('task.event', {
           msg: 'List of task available!,',
           result: res.tasks,
         })
         return null;
       }
       else {
-        bus.publish('task.workerEvent', {
+        bus.publish('task.event', {
           msg: 'Creating new task!,',
         })
         return bus.send('task.createTask', {
